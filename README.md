@@ -1,6 +1,6 @@
 Delegate
 ========
 
-A C# like delegate in C++.
+A C# like MulticastDelegate template in C++11.
 
-In repository, there is a Microsoft Visual Studio 2010 console project for testing.
+In repository, there is a Microsoft Visual Studio 2017 console project for testing.
