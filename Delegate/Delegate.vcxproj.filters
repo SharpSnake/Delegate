@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Delegate.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DelegateBase.h">
+    <ClInclude Include="Delegate.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
