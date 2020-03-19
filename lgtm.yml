@@ -3,7 +3,7 @@ path_classifiers:
     - README.md
     - LICENSE
 extraction:
-cpp:
+  cpp:
     # The `index` step builds the code and extracts information during the build
     # process.
     index:
