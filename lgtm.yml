@@ -1,0 +1,14 @@
+path_classifiers:
+  docs:
+    - README.md
+    - LICENSE
+extraction:
+  cpp:
+  index:
+  solution: 
+        - Delegate.sln
+  msbuild:
+        # Specify a list of additional arguments to MSBuild. Default: empty.
+        arguments: /p:Platform=x64 /p:Configuration=Release
+  vstools_version: 15
+
