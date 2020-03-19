@@ -7,13 +7,6 @@ extraction:
     # The `index` step builds the code and extracts information during the build
     # process.
     index:
-      # Override the autobuild process by specifying a list of custom build commands
-      # to use instead. 
-      build_command:
-        - $GNU_MAKE -j2 -s
-      # Specify that all project or solution files should be used for extraction.
-      # Default: false.
-      all_solutions: true
       # Specify a list of one or more project or solution files for extraction.
       # Default: LGTM chooses the file closest to the root of the repository (this may
       # fail if there are multiple candidates).
