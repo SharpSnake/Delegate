@@ -2,6 +2,7 @@ Delegate
 ========
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4a2f2d00890649e6bf42a43962b30a92)](https://app.codacy.com/manual/SharpSnake/Delegate?utm_source=github.com&utm_medium=referral&utm_content=SharpSnake/Delegate&utm_campaign=Badge_Grade_Dashboard)
+[![Build Status](https://travis-ci.org/SharpSnake/Delegate.svg?branch=master)](https://travis-ci.org/SharpSnake/Delegate)
 [![Build status](https://ci.appveyor.com/api/projects/status/ls0o466671gthx5q?svg=true)](https://ci.appveyor.com/project/SharpSnake/delegate)
 ![GitHub top language](https://img.shields.io/github/languages/top/SharpSnake/Delegate)
 [![C++ Version](https://img.shields.io/badge/%2Fstd-%3E%3D%20C%2B%2B11-blue)](https://github.com/AnthonyCalandra/modern-cpp-features#c11-language-features)
