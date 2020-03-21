@@ -1,12 +1,8 @@
-sudo: required
-dist: trusty
 language: cpp
-os:
-  - linux
 compiler:
   - gcc
 install:
-- if [[ $CXX = g++ ]]; then export CXX="g++-4.9" CC="gcc-4.9"; fi
+- export CXX="g++-4.8"
 
 script:
   - gcc ./Delegate/TestDelegate.cpp -std=c++11 -o TestDelegate
