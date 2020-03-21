@@ -1,0 +1,10 @@
+sudo: required
+dist: trusty
+language: cpp
+os:
+  - linux
+compiler:
+  - gcc
+script:
+  - gcc ./Delegate/TestDelegate.cpp -std=c++11 -o TestDelegate
+  - ./TestDelegate
