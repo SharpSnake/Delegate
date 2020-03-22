@@ -35,5 +35,7 @@ script:
   - g++ ./Delegate/TestDelegate.cpp -std=c++11 -o TestDelegate
   - ./TestDelegate
 
-after_success: 
-  - bash <(curl -s https://codecov.io/bash)
+#after_success: 
+  # this need compiler flags: -fprofile-arcs -ftest-coverag
+  # example: https://github.com/codecov/example-cpp11
+  # - bash <(curl -s https://codecov.io/bash)
