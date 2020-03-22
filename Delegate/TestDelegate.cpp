@@ -70,7 +70,9 @@ public:
 	void m_Button_Click_CallBack2( MouseButtons btn, int x, int y )
 	{
 		cout<< "Dialog CallBack2, " << btn << ":\t( " << x << ", " << y << " )" << endl;
-		m_Button->MouseClick -= { &VDialog::m_Button_Click_CallBack2, this };
+		
+		// What if unregister a delegate when we still firing the invocationList?
+		//m_Button->MouseClick -= { &VDialog::m_Button_Click_CallBack2, this };
 	}
 
 	void m_Button_Click_CallBack3( MouseButtons btn, int x, int y )	{
@@ -129,6 +131,5 @@ void Test_DialogBtnClick()
 
 int main(int argc, char* argv[])
 {
-	while( 1 )
-		Test_DialogBtnClick();
+	Test_DialogBtnClick();
 }

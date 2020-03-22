@@ -1,14 +1,36 @@
+# Referred to: https://github.com/greenplum-db/gpdb/blob/master/.travis.yml
 language: cpp
-compiler: g++
+sudo: false
+
+addons:
+    apt:
+        config:
+            retries: true
+        sources: &common_sources
+            - ubuntu-toolchain-r-test
+        packages: &common_packages
+            - gcc-7
+            - g++-7
+
+matrix:
+    include:
+        - os: linux
+          dist: bionic
+          compiler: gcc
+          env:
+              - T=release C=""
+              - OVERRIDE_CC="CC=gcc-7" OVERRIDE_CXX="CXX=g++-7"
+          addons:
+              apt:
+                  sources:
+                      - *common_sources
+                  packages:
+                      - *common_packages
 
 before_install:
-- sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-- sudo apt-get update -qq
-
-install:
-- sudo apt-get install -qq g++-4.9
-- export CXX="g++-4.9"
+    - eval "${OVERRIDE_CC}"
+    - eval "${OVERRIDE_CXX}"
 
 script:
-  - gcc ./Delegate/TestDelegate.cpp -std=c++11 -o TestDelegate
+  - g++ ./Delegate/TestDelegate.cpp -std=c++11 -o TestDelegate
   - ./TestDelegate
